@@ -1,2 +1,5 @@
-# pricing-saas-compare-fitness-1405
-مقایسه قیمت پلن‌های SaaS فیتنس و سلامت فارسی
+# مقایسه قیمت فیتنس‌یار
+
+صفحه مقایسه پلن‌های SaaS فیتنس فارسی RTL Minimal Mono.
+
+https://beig-rules.github.io/pricing-saas-compare-fitness-1405/

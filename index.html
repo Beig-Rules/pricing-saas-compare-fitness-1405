@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مقایسه قیمت | فیتنس‌یار پرو</title>
+  <style>
+    :root { --bg:#fff; --text:#111; --muted:#666; --accent:#000; --border:#e5e5e5; --card:#fafafa; }
+    [data-theme=dark] { --bg:#0a0a0a; --text:#f5f5f5; --muted:#aaa; --accent:#fff; --border:#222; --card:#111; }
+    *{box-sizing:border-box;margin:0;padding:0} body{font-family:"Vazirmatn",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    .container{max-width:960px;margin:0 auto;padding:2rem 1.25rem}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
+    h1{font-size:2.2rem;margin-bottom:1rem}
+    .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin:2rem 0}
+    .plan{border:1px solid var(--border);border-radius:12px;padding:1.5rem;background:var(--card);text-align:center}
+    .plan.featured{border-color:var(--accent);transform:scale(1.02)}
+    .price{font-size:2rem;font-weight:700;margin:1rem 0}
+    button.cta{background:var(--accent);color:var(--bg);border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;width:100%;font-weight:600}
+    button.theme{background:none;border:1px solid var(--border);color:var(--text);padding:0.4rem 0.8rem;border-radius:6px;cursor:pointer}
+  </style>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header><div class="logo">فیتنس‌یار پرو</div><button class="theme" onclick="toggleTheme()">تم</button></header>
+    <h1>مقایسه پلن‌های اشتراک</h1>
+    <p style="color:var(--muted);margin-bottom:2rem">انتخاب پلن مناسب برای پیگیری ورزش و سلامت شما. همه قیمت‌ها به تومان.</p>
+    <div class="plans">
+      <div class="plan"><h3>پایه</h3><div class="price">۹۹،۰۰۰</div><p>ماهانه</p><ul style="text-align:right;margin:1rem 0;list-style:none"><li>برنامه پایه</li><li>پیگیری ساده</li></ul><button class="cta">انتخاب</button></div>
+      <div class="plan featured"><h3>حرفه‌ای</h3><div class="price">۱۹۹،۰۰۰</div><p>ماهانه</p><ul style="text-align:right;margin:1rem 0;list-style:none"><li>همه ممکنات پایه</li><li>برنامه شخصی</li><li>پشتیبانی</li></ul><button class="cta">انتخاب پیشنهادی</button></div>
+      <div class="plan"><h3>تیم</h3><div class="price">۴۹۹،۰۰۰</div><p>ماهانه</p><ul style="text-align:right;margin:1rem 0;list-style:none"><li>تا ۱۰ کاربر</li><li>گزارش پیشرفته</li></ul><button class="cta">انتخاب</button></div>
+    </div>
+  </div>
+  <script>
+    function toggleTheme(){const h=document.documentElement;const c=h.getAttribute('data-theme')||'light';h.setAttribute('data-theme',c==='light'?'dark':'light');localStorage.setItem('theme',h.getAttribute('data-theme'));}
+    if(localStorage.getItem('theme')==='dark'||(!localStorage.getItem('theme')&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');
+  </script>
+</body>
+</html>
